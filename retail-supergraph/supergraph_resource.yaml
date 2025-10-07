@@ -1,0 +1,18 @@
+apiVersion: apollographql.com/v1alpha2
+kind: Supergraph
+metadata:
+  name: router-retail
+spec:
+  replicas: 2
+  schema:
+    resource:
+      name: retail
+  routerConfig:
+    homepage:
+      enabled: false
+    sandbox:
+      enabled: true
+    supergraph:
+      introspection: true
+  podTemplate:
+    routerVersion: 2.6.2

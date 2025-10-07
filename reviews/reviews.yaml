@@ -1,0 +1,13 @@
+apiVersion: apollographql.com/v1alpha2
+kind: Subgraph
+metadata:
+  name: reviews
+  labels:
+    domain: retail
+  namespace: apollo-operator
+spec:
+  endpoint: http://reviews
+  schema:
+    ociImage:
+      reference: ghcr.io/example/reviews:latest
+      path: /app/schema.graphql

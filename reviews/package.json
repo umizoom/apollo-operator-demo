@@ -1,0 +1,19 @@
+{
+  "name": "reviews-subgraph",
+  "version": "1.0.0",
+  "description": "Apollo Federation subgraph for product reviews",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "@apollo/subgraph": "^2.7.0",
+    "graphql": "^16.8.1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: operator
+  namespace: argocd
+spec:
+  project: default
+  ignoreDifferences:
+    - group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      jsonPointers:
+        - /spec/names/shortNames
+        - /spec/names/categories
+      jqPathExpressions:
+        - .spec.versions[]?.additionalPrinterColumns
+  source:
+    chart: operator-chart
+    repoURL: registry-1.docker.io/apollograph
+    targetRevision: "1.0.0"
+    helm:
+      releaseName: apollo-operator
+      valuesObject:
+        apiKey:
+          secretName: apollo-api-key
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: apollo-operator
+  syncPolicy:
+    automated: { }

@@ -1,0 +1,9 @@
+apiVersion: apollographql.com/v1alpha2
+kind: SupergraphSchema
+metadata:
+  name: retail
+spec:
+  selectors:
+    - matchLabels:
+        domain: retail
+  graphRef: mygraph@myref
