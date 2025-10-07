@@ -6,4 +6,4 @@ spec:
   selectors:
     - matchLabels:
         domain: retail
-  graphRef: mygraph@myref
+  graphRef: uabbasi@current

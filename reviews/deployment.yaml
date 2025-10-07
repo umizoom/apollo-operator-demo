@@ -30,8 +30,8 @@ spec:
         app: reviews
     spec:
       containers:
-      - image: ghcr.io/example/reviews:latest
-        name: reviews
-        ports:
-        - containerPort: 4000
-        resources: {}
+        - image: ghcr.io/umizoom/reviews:latest
+          name: reviews
+          ports:
+            - containerPort: 4000
+          resources: {}
