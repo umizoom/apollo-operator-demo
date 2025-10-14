@@ -28,7 +28,6 @@ spec:
           id: ID!
           name: String
           description: String
-          category: String
         }
         
         type Query {
@@ -36,7 +35,7 @@ spec:
             @connect(
               source: "ecomm"
               http: { GET: "/products/{$args.id}" }
-              selection: "id name description category"
+              selection: "id name description"
               entity: true
             )
       }
