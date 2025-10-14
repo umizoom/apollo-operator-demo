@@ -14,10 +14,10 @@ spec:
       enabled: true
     supergraph:
       introspection: true
-    tls:
-      subgraph:
-        all:
-          certificate_authorities: /certs/mntv_internal_root_ca.crt
+    # tls:
+    #   subgraph:
+    #     all:
+    #       certificate_authorities: /certs/mntv_internal_root_ca.crt
   podTemplate:
     routerVersion: 2.7.0
     spec:
