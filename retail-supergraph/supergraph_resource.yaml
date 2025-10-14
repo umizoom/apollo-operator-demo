@@ -15,4 +15,4 @@ spec:
     supergraph:
       introspection: true
   podTemplate:
-    routerVersion: 2.6.2
+    routerVersion: 2.7.0
