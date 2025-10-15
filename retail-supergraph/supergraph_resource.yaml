@@ -20,14 +20,14 @@ spec:
     #       certificate_authorities: /certs/mntv_internal_root_ca.crt
   podTemplate:
     routerVersion: 2.7.0
-    spec:
-      volumes:
-        - name: apollorouter-ca-cert
-          configMap:
-            name: apollorouter-ca-cert
-      containers:
-        - name: router
-          volumeMounts:
-            - name: apollorouter-ca-cert
-              mountPath: /certs  # Replace with desired mount path
-              readOnly: true
+    # spec:
+    #   volumes:
+    #     - name: apollorouter-ca-cert
+    #       configMap:
+    #         name: apollorouter-ca-cert
+    #   containers:
+    #     - name: router
+    #       volumeMounts:
+    #         - name: apollorouter-ca-cert
+    #           mountPath: /certs  # Replace with desired mount path
+    #           readOnly: true
